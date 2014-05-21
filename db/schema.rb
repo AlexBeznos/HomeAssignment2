@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20140521120712) do
     t.integer "operations"
     t.integer "size"
     t.boolean "intelect"
-    t.integer "discharge"
+    t.string  "discharge"
     t.float   "price"
+    t.integer "integral"
   end
 
 end

@@ -21,4 +21,22 @@ We have table with robots in the file, with such columns:
 5. ID should be given in process of file processing. ID should be unique. ID looks like nnn, 0nn, 00n.
 6. In general, every type of robots have best(entered by the user) size of criterion. For some indexes(speed, price) in sense of best value indexes in some range.
 7. For every for every type of robot should be entered priority in range from 0 to 9
-8. Quality criterion 
+8. Quality criterion of robots by different index should be determined as attitude of absolute value of difference of robot's parametr ffrom the best to this the best value.
+9. Integral(criterion union of all indexs) determined as sum of all quality criterions multiplied to the priority of this criterion.
+10. As less integral value of quality better.
+11. Mistake of positioning of robot should be determined in minutes.
+12. Speed should be determined in m per minute
+13. Size of robot should be determined meters and centimeters.
+14. Existence of intelect, should be determined as boolean number.
+15. Time of discharging of robot, should be determined as hours and minutes.(hh-mm)
+16. Price should be determined in hryvnas.
+
+- Find:
+1. Input data from the text file to the database.
+2. Output to the screen inputed data.
+3. By the entered type of robot and criterions by user(best number of values), and structure of system of priorities, find best ones (not more than 3) by the integral number.
+4. Output data about 3 best robots in the form of table in the order of decreasing:
+  1. Type of robot
+  2. ID
+  3. Name of robot
+  4. Criterion of quality

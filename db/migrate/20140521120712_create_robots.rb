@@ -8,7 +8,7 @@ class CreateRobots < ActiveRecord::Migration
       t.integer :operations
       t.integer :size
       t.boolean :intelect
-      t.integer :discharge
+      t.string :discharge
       t.float :price
       t.integer :integral
     end
