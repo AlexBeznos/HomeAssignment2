@@ -1,28 +1,24 @@
-== README
+== Task:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Given:
+We have table with robots in the file, with such columns:
+1. Type
+2. Name
+3. ID
+4. Mistake on positioning
+5. Posible speed
+6. List with required operations
+7. Size
+8. Existens of intelect(at least on the medium level)
+9. Time of discharge 
+10. Price
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- Limits for inputed values
+1. Number of robots should be at least 1 and not more then 99
+2. Type of robots(санитар, снегоход, пылесос - not more then 10 types)
+3. Names of robots should have only kirilic letters and first symbols should be capital
+4. Length of the name should be not more then 30 letters
+5. ID should be given in process of file processing. ID should be unique. ID looks like nnn, 0nn, 00n.
+6. In general, every type of robots have best(entered by the user) size of criterion. For some indexes(speed, price) in sense of best value indexes in some range.
+7. For every for every type of robot should be entered priority in range from 0 to 9
+8. Quality criterion 
