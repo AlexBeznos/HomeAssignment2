@@ -10,8 +10,7 @@ class CreateRobots < ActiveRecord::Migration
       t.boolean :intelect
       t.integer :discharge
       t.float :price
-
-      t.timestamps
+      t.integer :integral
     end
   end
 end

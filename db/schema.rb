@@ -14,17 +14,15 @@
 ActiveRecord::Schema.define(version: 20140521120712) do
 
   create_table "robots", force: true do |t|
-    t.string   "type"
-    t.string   "name"
-    t.integer  "mistake"
-    t.integer  "speed"
-    t.integer  "operations"
-    t.integer  "size"
-    t.boolean  "intelect"
-    t.integer  "discharge"
-    t.float    "price"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "type"
+    t.string  "name"
+    t.integer "mistake"
+    t.integer "speed"
+    t.integer "operations"
+    t.integer "size"
+    t.boolean "intelect"
+    t.integer "discharge"
+    t.float   "price"
   end
 
 end
