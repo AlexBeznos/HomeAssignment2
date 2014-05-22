@@ -1,2 +1,35 @@
 <h1>Home#update</h1>
-<p>Find me in app/views/home/update.html.erb</p>
+
+<h1>Listing comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Mistake</th>
+      <th>Speed</th>
+      <th>Operations</th>
+      <th>Size</th>
+      <th>Intelect</th>
+      <th>Discharge</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @robots.each do |r| %>
+      <tr>
+        <td><%= r.type %></td>
+        <td><%= r.name %></td>
+        <td><%= r.mistake %></td>
+        <td><%= r.speed %></td>
+        <td><%= r.operations %></td>
+        <td><%= r.size %></td>
+        <td><%= r.intelect %></td>
+        <td><%= r.discharge %></td>
+        <td><%= r.price %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -3,13 +3,8 @@ class HomeController < ApplicationController
   end
 
   def update
-  	file = params[:input_data]
-  	if File.extname(file) == '.txt'
-  		Robot.destroy_all
-  		File.new(file, "r").each { |line| Robot.inputer(line)}
-  	else
-  		redirect_to root_path, alert: "You have uploaded wrong type of file! Try to reload it!"
-  	end
+    Robot.destroy_all
+  	File.new("public/uploads/file.txt", "r").each { |line| Robot.inputer(line)}
   	@robots = Robot.all
   end
 
