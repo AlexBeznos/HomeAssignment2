@@ -1,3 +1,7 @@
 h1 Robots for every one
 
 =link_to "Link", :home_path
+
+= form_tag({:action => 'update'}, :multipart => true)
+  = file_field_tag :input_data
+  = submit_tag 'Submit'

@@ -1,32 +1,19 @@
 class Robot < ActiveRecord::Base
+  self.inheritance_column = nil
 
   def self.inputer(line)
-  	type = Robot.whilenes(line, 0)
-  	name = Robot.whilenes(line, 1)
-  	mistake = Robot.whilenes(line, 2).to_i
-  	speed = Robot.whilenes(line, 3).to_i
-    operations = Robot.whilenes(line, 4).to_i
-    size = Robot.whilenes(line, 5).to_i
-    intelect = Robot.boolean(Robot.whilenes(line, 6))
-    discharge = Robot.whilenes(line, 7)
-    price = Robot.whilenes(line, 8).to_f
-    integral = mistake + speed + operations + size + culc_in(intelect)  + culc_dis(discharge) + price 
-    Robot.create(type: type, name: name, mistake: mistake, speed: speed, operations: operations, size: size, intelect: intelect, discharge: discharge, price: price, integral: integral)
-  end
-  
-  def self.whilenes(line, numb)
-    word = ""
-    quontity = 0
-    puts(line)
-    while quontity == numb+1 do
-      if quontity > numb and quontity < numb + 1
-      	word = word + line[i]
-      end
-      if line[i] = "|"
-      	quontity+=1
-      end
-    end
-    return word
+    array = line.split('|')
+  	boo = array[0]
+  	name1 = array[1]
+  	mistake1 = array[2].to_i
+  	speed1 = array[3].to_i
+    operations1 = array[4].to_i
+    size1 = array[5].to_i
+    intelect1 = Robot.boolean(array[6])
+    discharge1 = array[7]
+    price1 = array[8].to_f
+    integral1 = mistake1 + speed1 + operations1 + size1 + culc_in(intelect1)  + culc_dis(discharge1) + price1 
+    Robot.create(type: boo, name: name1, mistake: mistake1, speed: speed1, operations: operations1, size: size1, intelect: intelect1, discharge: discharge1, price: price1, integral: integral1)
   end
 
   def self.culc_in(num)
@@ -36,17 +23,8 @@ class Robot < ActiveRecord::Base
   end
 
   def self.culc_dis(time)
-  	hour = ""
-  	min = ""
-  	for i in 1..time.length do
-  		break if time[i] == "-"
-  		hour = hour + time[i]
-    end
-    i=+1
-    for j in i..time.length do
-    	min = min + time[j]
-    end
-    return hour.to_i*60+min.to_i
+  	arr = time.split('-')
+    return arr[0].to_i*60+arr[1].to_i
   end
 
   def self.boolean(str)

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "home#index"
   get 'home/index'
 
-  get 'home/update', as: :home_path
+  post 'home/update', as: :home_path
 
   get 'home/research'
 
