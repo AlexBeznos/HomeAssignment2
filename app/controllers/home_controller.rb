@@ -4,12 +4,11 @@ class HomeController < ApplicationController
 
   def update
     Robot.destroy_all
-    upload = params[:input_data]
-    File.open(Rails.root.join('public', 'uploads', upload.original_filename), 'w') do |file|
-      upload = upload.to_s.encode('UTF-8', {:invalid => :replace, :undef => :replace, :replace => '?'})
-      file.write(upload.to_file.read)
-    end
-  	File.new("public/uploads/file.txt", "r").each { |line| Robot.inputer(line)}
+    directory = "public/uploads"
+    name = params[:input_data].original_filename
+    path = File.join(directory, name)
+    File.open(path, "wb") {|f| f.write(params[:input_data].read)}
+  	File.new("public/uploads/" + name, "r").each { |line| Robot.inputer(line)}
   	@robots = Robot.all
   end
 
