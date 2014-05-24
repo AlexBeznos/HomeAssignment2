@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140521120712) do
     t.boolean "intelect"
     t.string  "discharge"
     t.float   "price"
-    t.integer "integral"
+    t.float   "integral"
   end
 
 end
