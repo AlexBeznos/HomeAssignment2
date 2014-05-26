@@ -1,14 +1,12 @@
-<h1>Home#research</h1>
-<p>Find me in app/views/home/research.html.erb</p>
-<h1>Listing comments</h1>
+<h1>Robots which suits to you:</h1>
 
 <table>
   <thead>
     <tr>
       <th>Type</th>
+      <th>ID</th>
       <th>Name</th>
-      <th>Price</th>
-      <th>Integral</th>
+      <th>Criterion</th>
     </tr>
   </thead>
 
@@ -16,7 +14,7 @@
     <% @robots.each do |r| %>
       <tr>
         <td><%= r.type %></td>
-        <td><%= r.name %></td>
+        <td><%= r.id >= 10 ? "0" + r.id.to_s : "00" + r.id.to_s %></td>
         <td><%= r.price %></td>
         <td><%= r.integral %></td>
       </tr>

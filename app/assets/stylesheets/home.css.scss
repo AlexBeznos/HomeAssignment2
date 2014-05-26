@@ -1,3 +1,30 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+input {
+	float: right;
+}
+.file_button {
+	position: absolute;
+	margin-left: -220pt;
+	margin-top: -190pt;
+}
+.footer {
+	margin-top: 100pt;
+}
+.uk-offcanvas-bar {
+	color: #fff;
+	h1 {
+	  color: #fff;
+	}
+}
+.something {
+	margin-right: 20pt;
+	margin-top: 10pt;
+}
+
+table {
+	width: 100%;
+}
+
+td {
+	float: rigth;
+	text-align: center;
+}

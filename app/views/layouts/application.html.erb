@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HW2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>MedRobots</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
+<div id="head">
+	<div class="uk-width-1-2 uk-align-center uk-animation-fade">
+		<center><a href="<%= root_path %>"><%= image_tag "robot.png"%></a>
+		</center>
+    </div>
+</div>
+<div class="uk-width-medium-1-2 uk-width-small-1-1 uk-align-center">
+  <%= yield %>
+</div>
+<div class="footer">
+	<div class="uk-align-center"><center>Created by AlexBeznos</center>
+	</div>
+</div>
+</end>
 
 </body>
 </html>
