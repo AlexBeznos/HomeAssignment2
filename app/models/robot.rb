@@ -31,4 +31,21 @@ class Robot < ActiveRecord::Base
   	str == "true" ? true : false
   end
 
+  def self.finder(integral, type)
+    i = -1
+    b = []
+    c = []
+    Robot.where(type: type).each do |robot|
+      if robot.integral > integral
+        b.push([ robot.id, (robot.integral - integral).round(2) ])
+      else
+        b.push([ robot.id, (integral - robot.integral).round(2) ])
+      end
+    end
+    b.sort_by {|ele| ele[1] }.each do |b|
+      i += 1
+      c[i] = b[0]
+    end
+    return c.take(3)
+  end
 end

@@ -21,7 +21,7 @@ We have table with robots in the file, with such columns:
 5. ID should be given in process of file processing. ID should be unique. ID looks like nnn, 0nn, 00n.
 6. In general, every type of robots have best(entered by the user) size of criterion. For some indexes(speed, price) in sense of best value indexes in some range.
 7. For every for every type of robot should be entered priority in range from 0 to 9
-8. Quality criterion of robots by different index should be determined as attitude of absolute value of difference of robot's parametr ffrom the best to this the best value.
+8. Quality criterion of robots by different index should be determined as attitude of absolute value of difference of robot's parametr from the best to this the best value.
 9. Integral(criterion union of all indexs) determined as sum of all quality criterions multiplied to the priority of this criterion.
 10. As less integral value of quality better.
 11. Mistake of positioning of robot should be determined in minutes.

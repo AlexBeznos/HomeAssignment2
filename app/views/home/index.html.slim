@@ -1,6 +1,28 @@
 h1 Robots for every one
 
-=link_to "Link", :home_path
+= form_tag({:action => 'research'})
+  = label_tag(:type, "Choose the type of your robot:")
+  = select_tag(:type, options_for_select(@types)) 
+  = label_tag(:speed, "How fast should it be:") 
+  = text_field_tag(:speed) 
+  = label_tag(:mistake, "How truethfull should be positioning?")
+  = text_field_tag(:mistake)
+  = label_tag(:operations, "How many operaions should it produce?")
+  = text_field_tag(:operations)
+  = label_tag(:height, "Height of robot")
+  = text_field_tag(:height)
+  = label_tag(:width, "Width of robot")
+  = text_field_tag(:width)
+  = label_tag(:length, "Length of robot")
+  = text_field_tag(:length)
+  = label_tag(:int, "Should it have intelect?")
+  = check_box(:int, :init)
+  = label_tag(:discharge, "How fast should it discharge?")
+  = text_field_tag(:discharge)
+  = label_tag(:price, "How pricy should it be?")
+  = text_field_tag(:price)
+  = submit_tag 'Submit'
+
 
 = form_tag({:action => 'update'}, :multipart => true)
   = file_field_tag :input_data

@@ -1,2 +1,25 @@
 <h1>Home#research</h1>
 <p>Find me in app/views/home/research.html.erb</p>
+<h1>Listing comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Integral</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @robots.each do |r| %>
+      <tr>
+        <td><%= r.type %></td>
+        <td><%= r.name %></td>
+        <td><%= r.price %></td>
+        <td><%= r.integral %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
