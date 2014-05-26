@@ -1,7 +1,7 @@
 class Robot < ActiveRecord::Base
   self.inheritance_column = nil
 
-  def self.inputer(line)
+  def self.inputer(line) # method for inputing robots
     array = line.split('|')
   	boo = array[0]
   	name1 = array[1]
@@ -16,22 +16,22 @@ class Robot < ActiveRecord::Base
     Robot.create(type: boo, name: name1, mistake: mistake1, speed: speed1, operations: operations1, size: size1, intelect: intelect1, discharge: discharge1, price: price1, integral: integral1)
   end
 
-  def self.culc_in(num)
+  def self.culc_in(num) # gives 10 if robot have intelect
   	i = 0
   	i = 10 if num == true
   	return i
   end
 
-  def self.culc_dis(time)
+  def self.culc_dis(time) # calculator for time of discharging
   	arr = time.split('-')
     return arr[0].to_i*60+arr[1].to_i
   end
 
-  def self.boolean(str)
+  def self.boolean(str) # method which output boolean true or false for filling in database with this type
   	str == "true" ? true : false
   end
 
-  def self.finder(integral, type)
+  def self.finder(integral, type) #Method which will look for robots with this type and output needed ids of robots
     i = -1
     b = []
     c = []

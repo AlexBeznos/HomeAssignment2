@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-  def index
-    @types = Robot.all.map { |robo| [robo.type] }.uniq
+  def index # main controller
+    @types = Robot.all.map { |robo| [robo.type] }.uniq # types of robots to make select tag
   end
 
   def update
@@ -14,7 +14,7 @@ class HomeController < ApplicationController
   	@robots = Robot.all
   end
 
-  def research
+  def research #method for finding ideal robots
     type = params[:type]
     speed = params[:speed].to_i
     mistake = params[:mistake].to_i
